@@ -13,7 +13,7 @@ function pickObjectKeys<T extends object, K extends keyof T>(obj: T , keys: K[])
   const language = {
     name: "TypeScript",
     age: 8,
-    extensions: ['ts', 'tsx']
+    extensions: ['ts', 'tsx',12,true]
   }
   
   const ageAndExtensions = pickObjectKeys(language, ['age', 'extensions'])
@@ -51,3 +51,10 @@ function stringifyObjectKeyValues<T extends Record<string, any>>(obj: T) {
   const stringifiedValues = stringifyObjectKeyValues({ a: "1", b: 2, c: true, d: [1, 2, 3]})
   console.log(stringifiedValues)
 
+  type Partial<T> = {
+    [P in keyof T]?: T[P];
+  };
+
+  const optional : Partial<typeof language> = {
+
+  }
