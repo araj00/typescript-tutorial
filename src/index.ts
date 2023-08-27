@@ -1,6 +1,6 @@
-let language:string = 'typescript';
-language = 'javascript';
-console.log(language);
+let a:string = 'typescript';
+a = 'javascript';
+console.log(a);
 
 // const type usually does not allow redefining the value of the variable that's why below code will throw an error on change.
 
